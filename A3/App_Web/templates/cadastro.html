@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/Style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="post">
+            <h1>Novo cadastro:</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Nome">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Usuário">
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Senha">
+            </div>
+            <div class="input-box">
+                <button type="submit" class="btn">Cadastrar</button>
+            </div>
+            <div class="register-link">
+                <a href="index">Deseja-Voltar?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
