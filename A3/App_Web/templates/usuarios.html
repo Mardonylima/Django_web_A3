@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuários Cadastrados</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/Style.css' %}">
 </head>
 <body>
-    <h1>Usuários Cadastrados</h1>
+    <div class="container">
+        <h1>Usuários Cadastrados</h1>
 
-    {% if usuarios %}
-        <ul>
-            {% for usuario in usuarios %}
-                <li>{{ usuario.nome }} - {{ usuario.usuario }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Não há usuários cadastrados.</p>
-    {% endif %}
+        {% if usuarios %}
+            <ul class="user-list">
+                {% for usuario in usuarios %}
+                    <li class="user-item">
+                        <span class="user-name">{{ usuario.nome }}</span> -
+                        <span class="user-login">{{ usuario.login }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Não há usuários cadastrados.</p>
+        {% endif %}
+
+    </div>
 </body>
 </html>
